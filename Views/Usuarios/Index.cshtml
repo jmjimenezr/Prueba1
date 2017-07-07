@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Prueba1.Models.Usuarios>
+
+@{
+    
+}
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+<br />
+<div class="container">
+    <div class="row">
+        <header class="page-header">
+            <h4>Listado de Usuarios</h4>
+        </header>
+    </div>
+    <div class="row">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApellidoP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApellidoM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApellidoP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApellidoM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>  
+</div>
